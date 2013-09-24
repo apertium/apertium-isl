@@ -330,7 +330,7 @@ REMOVE Det IF (0 Det) (0 Pron) (NOT 1 POST-DET);
 REMOVE DemPron IF (-1C VerbFin) (1C Refl);
 
 # í gær sá stelpan.
-REMOVE DemPron IF (0 DemPron) (0 VerbFin) (NOT -1* VerbFin BARRIER CLB) (NOT 1 VerbFin BARRIER CLB);
+REMOVE DemPron IF (0 DemPron) (0 VerbFin) (NOT -1* VerbFin BARRIER CLB) (NOT 1* VerbFin BARRIER CLB);
 
 #Þetta er borgin, er hann kom frá.
 SELECT Rel IF (-1C Coma) (0 ("er")) (1C* VerbFin BARRIER CLB);
@@ -343,7 +343,7 @@ REMOVE Nom IF (-1C AccDatPrep) (0C Nom OR Acc);
 #################################################################################
 
 # sem hann sér í dag.
-REMOVE Refl IF (0 Refl) (0 VerbFin) (NOT -1* VerbFin BARRIER CLB) (NOT 1 VerbFin BARRIER CLB);
+REMOVE Refl IF (0 Refl) (0 VerbFin) (NOT -1* VerbFin BARRIER CLB) (NOT 1* VerbFin BARRIER CLB);
 
 # Hann meiddi sig, Hún meiddi sig, Það meiddi sig, Þeir meiddu sig ...
 SELECT Refl + $$GENDER + $$NUMBER IF (-1* PersPron + $$GENDER + $$NUMBER BARRIER CLB);
