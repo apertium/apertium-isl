@@ -1,0 +1,13 @@
+* text=auto !eol
+/AUTHORS -text
+/COPYING -text
+/ChangeLog -text
+/Makefile.am -text
+/NEWS -text
+/README -text
+/apertium-isl-0.1.pc.in -text
+/apertium-isl.isl.dix -text
+/apertium-isl.isl.rlx -text
+/autogen.sh -text
+/configure.ac -text
+/modes.xml -text
