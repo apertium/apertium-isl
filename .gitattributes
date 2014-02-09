@@ -10,4 +10,5 @@
 /apertium-isl.pc.in -text
 /autogen.sh -text
 /configure.ac -text
+/isl.prob -text svneol=unset#unset
 /modes.xml -text
