@@ -2,8 +2,6 @@
 ## Makefile for apertium-isl
 ###############################################################################
 
-RELEASE=0.1
-VERSION=0.1.0
 LANG1=isl
 BASENAME=apertium-$(LANG1)
 
@@ -71,23 +69,17 @@ apertium_isl_DATA=$(TARGETS_COMMON) $(LANG1).prob
 pkgconfigdir = $(prefix)/share/pkgconfig
 pkgconfig_DATA = $(BASENAME).pc
 
-# Modes are not installed since they're all just "debug modes". All
-# modes are created by this goal.
-modes/$(LANG1)-morph.mode: modes.xml
-	apertium-validate-modes modes.xml
-	apertium-gen-modes modes.xml
-
 noinst_DATA=modes/$(LANG1)-morph.mode
 
 install-data-local: install-modes
-	test -d $(DESTDIR)$(apertium_isl_srcdir) || mkdir -p $(DESTDIR)$(apertium_isl_srcdir)
+	$(INSTALL_DATA) $(LANG1).prob $(DESTDIR)$(apertium_isl_srcdir)
 	$(INSTALL_DATA) $(BASENAME).$(LANG1).dix $(DESTDIR)$(apertium_isl_srcdir)
 	$(INSTALL_DATA) $(BASENAME).$(LANG1).rlx $(DESTDIR)$(apertium_isl_srcdir)
 	$(INSTALL_DATA) $(BASENAME).post-$(LANG1).dix $(DESTDIR)$(apertium_isl_srcdir)
 
 CLEANFILES = $(TARGETS_COMMON)
 clean-local:
-	-rm -rf .deps modes
+	-rm -rf .deps
 
 ###############################################################################
 ## Test
@@ -98,4 +90,3 @@ test: all
 	@echo "TODO test analysis results" > .test-ref
 	@diff .test-ref .test-mt
 	@rm .test-ref .test-mt
-
