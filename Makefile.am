@@ -41,8 +41,8 @@ $(LANG1).autopgen.bin: $(BASENAME).post-$(LANG1).dix
 ## Disambiguation rules
 ###############################################################################
 
-$(LANG1).rlx.bin: $(BASENAME).$(LANG1).rlx $(CGCOMP)
-	$(CGCOMP) $< $@
+$(LANG1).rlx.bin: $(BASENAME).$(LANG1).rlx
+	cg-comp $< $@
 
 ###############################################################################
 ## Distribution
@@ -62,7 +62,6 @@ EXTRA_DIST=$(BASENAME).$(LANG1).dix		\
 #   apertium_isl_srcdir: This is where the source files go
 
 apertium_isldir=$(prefix)/share/apertium/$(BASENAME)/
-apertium_isl_srcdir=$(prefix)/share/apertium/$(BASENAME)/
 
 apertium_isl_DATA=$(TARGETS_COMMON) $(LANG1).prob
 
