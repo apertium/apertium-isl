@@ -1,0 +1,14 @@
+[5_bAEXdujbfN#0] ^6/6<num>$
+[/5_bAEXdujbfN]
+[Kc-WySzn7u3p#0] ^192%/192%<num>$
+[/Kc-WySzn7u3p]
+[Obpssw6Tl8Tc#0] ^ætlarðu/ætla<vblex><pri><p2><sg>+þú<prn><p2><mf><sg><nom>$
+[/Obpssw6Tl8Tc]
+[RhprNrOvsovf#0] ^4%/4%<num>$
+[/RhprNrOvsovf]
+[b_L1AdLWjoDO#0] ^hefurðu/hafa<vbhaver><pri><p2><sg>+þú<prn><p2><mf><sg><nom>$
+[/b_L1AdLWjoDO]
+[tpcRMTtp2w5j#0] ^ertu/vera<vbser><pri><p2><sg>+þú<prn><p2><mf><sg><nom>$
+[/tpcRMTtp2w5j]
+[zbTuKuppzGqD#0] ^./.<sent>$
+[/zbTuKuppzGqD]
